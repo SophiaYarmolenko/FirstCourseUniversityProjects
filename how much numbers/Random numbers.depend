@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1572562552 source:c:\users\sophia\desktop\random numbers\loopsearch.cpp
+
+1572556147 c:\users\sophia\desktop\random numbers\rnd.cpp
+	"Rnd.hpp"
+
+1572560218 c:\users\sophia\desktop\random numbers\rnd.hpp
+	"fib.hpp"
+
+1572555590 c:\users\sophia\desktop\random numbers\fib.hpp
+
+1572562500 source:c:\users\sophia\desktop\random numbers\main.cpp
+	<iostream>
+	"Rnd.hpp"
+
+1572556165 c:\users\sophia\desktop\random numbers\loopsearch.cpp
+	"Rnd.cpp"
+	"Rnd.hpp"
+	<cstdio>
+
+1572560552 source:c:\users\sophia\desktop\random numbers\rnd.cpp
+	"Rnd.hpp"
+
+1572555682 source:c:\users\sophia\desktop\random numbers\fib.cpp
+	"fib.hpp"
+
+1572562081 c:\users\sophia\desktop\random numbers\loopsearch.hpp
+	"Rnd.hpp"
+

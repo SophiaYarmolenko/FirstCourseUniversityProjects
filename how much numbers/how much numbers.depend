@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1575029206 source:c:\users\sophia\desktop\how much numbers\main.cpp
+	<iostream>
+	"loopSearch1.hpp"
+	<fstream>
+	"howmuch.hpp"
+
+1573199703 c:\users\sophia\desktop\how much numbers\rnd.hpp
+
+1572555590 c:\users\sophia\desktop\how much numbers\fib.hpp
+
+1573240873 source:c:\users\sophia\desktop\how much numbers\rnd.cpp
+	"Rnd.hpp"
+
+1573199703 source:c:\users\sophia\desktop\how much numbers\loopsearch1.cpp
+	"loopSearch1.hpp"
+	"Rnd.hpp"
+
+1573199703 c:\users\sophia\desktop\how much numbers\loopsearch1.hpp
+	"Rnd.hpp"
+
+1573199968 source:c:\users\sophia\desktop\how much numbers\howmuch.cpp
+	"howmuch.hpp"
+	"Rnd.hpp"
+	"loopSearch1.hpp"
+
+1573199703 c:\users\sophia\desktop\how much numbers\howmuch.hpp
+	"Rnd.hpp"
+
