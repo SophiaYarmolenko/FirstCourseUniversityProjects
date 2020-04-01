@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1575808807 source:c:\users\sophia\desktop\black and white 3\rnd.cpp
+	"Rnd.hpp"
+
+1575808807 c:\users\sophia\desktop\black and white 3\rnd.hpp
+
+1575811966 source:c:\users\sophia\desktop\black and white 3\loopsearch1.cpp
+	"loopSearch1.hpp"
+	"Rnd.hpp"
+
+1575808807 c:\users\sophia\desktop\black and white 3\loopsearch1.hpp
+
+1575887748 source:c:\users\sophia\desktop\black and white 3\main.cpp
+	<iostream>
+	"loopSearch1.hpp"
+	<fstream>
+	<vector>
+	"Rnd.hpp"
+	<iostream>
+

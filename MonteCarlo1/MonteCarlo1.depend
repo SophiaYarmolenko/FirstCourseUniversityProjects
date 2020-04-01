@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1575884007 source:c:\users\sophia\desktop\montecarlo1\rnd.cpp
+	"Rnd.hpp"
+
+1575884007 c:\users\sophia\desktop\montecarlo1\rnd.hpp
+
+1575885139 source:c:\users\sophia\desktop\montecarlo1\main.cpp
+	<cmath>
+	<iostream>
+	<fstream>
+	<vector>
+	"Rnd.hpp"
+	<iostream>
+	<fstream>
+	<iomanip>
+

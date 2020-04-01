@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1575006316 source:c:\users\sophia\desktop\black and white1\howmuch.cpp
+	"howmuch.hpp"
+	"Rnd.hpp"
+	"loopSearch1.hpp"
+
+1575006316 c:\users\sophia\desktop\black and white1\howmuch.hpp
+
+1575006316 c:\users\sophia\desktop\black and white1\rnd.hpp
+
+1575006316 c:\users\sophia\desktop\black and white1\loopsearch1.hpp
+
+1575006316 source:c:\users\sophia\desktop\black and white1\loopsearch1.cpp
+	"loopSearch1.hpp"
+	"Rnd.hpp"
+
+1575006316 source:c:\users\sophia\desktop\black and white1\rnd.cpp
+	"Rnd.hpp"
+
+1575024548 source:c:\users\sophia\desktop\black and white1\main.cpp
+	<iostream>
+	"loopSearch1.hpp"
+	<fstream>
+	"howmuch.hpp"
+	<vector>
+	"Rnd.hpp"
+	<iostream>
+
