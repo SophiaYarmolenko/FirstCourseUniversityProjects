@@ -7,8 +7,22 @@
 #include "CLA.h"
 CLA::CLA()
 {
-    commands.add("help", help);
+    ///Add all command to vector with all function-command to form trie in another class
+    functions.push_back(&CLA::help);
+    functions.push_back(&CLA::quit);
+    functions.push_back(&CLA::logOn);
+    functions.push_back(&CLA::Exit);
+    functions.push_back(&CLA::save);
+    functions.push_back(&CLA::load);
+    functions.push_back(&CLA::logFile);
+    functions.push_back(&CLA::list);
+    functions.push_back(&CLA::logOff);
+    functions.push_back(&CLA::logAppend);
+    functions.push_back(&CLA::logNew);
+    functions.push_back(&CLA::logClearHistory);
+
 }
+
 void CLA::greeting()
 {
 
@@ -47,7 +61,7 @@ void CLA::logOn()
     history.setOnOf(1);
 }
 
-void CLA::logOf()
+void CLA::logOff()
 {
     history.setOnOf(0);
 }
@@ -76,4 +90,5 @@ string CLA::TimeToString()
     result << (time.tm_sec  < 10? "0": "") << time.tm_sec;
     return result.str();
 }
+
 
