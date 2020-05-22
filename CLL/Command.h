@@ -9,18 +9,19 @@
 #include <iostream>
 #include <vector>
 #include <functional>
+#include "CLA.h"
+
 using namespace std;
 
-class Command
+class Command:CLA
 {
 public:
     Command();
-    void virtual func();
 
     struct node
     {
         node *next[26];
-        vector< function <void()> > vfunc;
+        void *func();
         int strings;
 
         node()
