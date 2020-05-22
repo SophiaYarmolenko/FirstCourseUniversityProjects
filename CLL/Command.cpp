@@ -5,13 +5,26 @@
 #include "Command.h"
 Command::Command()
 {
-
+    //add trie elements
+    add("help");
+    add("quit");
+    add("log on");
+    add("exit");
+    add("save");
+    add("load");
+    add("log file");
+    add("list");
+    add("log Off");
+    add("log Append");
+    add("log New");
+    add("log clear history");
 }
 
 void Command::add(const string& s)
 {
     node *cur_v = root;
-    cur_v->vfunc.push_back(func);
+    Function function = functions[numberFunction];
+    numberFunction++;
 
     for (int i = 0; i < s.length(); i++)
     {
