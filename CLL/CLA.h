@@ -5,50 +5,33 @@
 #ifndef CLL_CLA_H
 #define CLL_CLA_H
 
-#include <iostream>;
+#include <iostream>
 #include "History.h"
-#include "Command.h"
 #include <vector>
+#include "windows.h"
+#include <sstream>
+#include <ctime>
 using namespace std;
 
-class CLA
+class CLA : public History
 {
-private:
-    History history;
-    Command commands;
-
 public:
-    CLA();
-
-    int numberFunction = 0;//number of function to form trie
-    typedef void (CLA::*Function)();
-    std::vector<Function> functions;
-
-    void greeting();
-    void help();
-    void quit();
-    void logOn();
-    void logOff();
-    void logAppend();
-    void logNew();
-    void Exit();
-    void save();
-    void load();
-    void logFile();
-    void list();
-    void logClearHistory();
-    string TimeToString();
+    static void greeting();
+    static void help();
+    static void quit();
+    static void logOn();
+    static void logOff();
+    static void logAppend();
+    static void logNew();
+    static void Exit();
+    static void save();
+    static void load();
+    static void logFile();
+    static void list();
+    static void logClearHistory();
+    static string TimeToString();
 };
 
 
 #endif //CLL_CLA_H
 
-
-
-
-/*
-    int i = 0;
-    (obj.*obj.functions[0])(i);
-    (obj.*obj.functions[1])(i);
-    (obj.*obj.functions[2])(i);
-*/

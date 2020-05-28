@@ -14,16 +14,17 @@ using namespace std;
 class History
 {
 private:
-    vector <string> history;
-    bool on_of = 0;
-    bool clear = 0;
+    static vector <string> history;
+    static bool on_of;
+    static bool clear;
 public:
-    void setClear(bool clear);
-
-public:
-    void setOnOf( bool onOf );
-    void PushBack( string command );
-    void Clear();
+    History();
+    static void setClear(bool clear);
+    static void Save();
+    static void setOnOf(bool onOf );
+    static void PushBack(string command );
+    static void Clear();
+   // static ifstream file;
 };
 
 

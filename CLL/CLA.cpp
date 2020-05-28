@@ -2,28 +2,9 @@
 // Created by Sophia on 20.05.2020.
 //
 
-#include <sstream>
-#include <ctime>
 #include "CLA.h"
-CLA::CLA()
-{
-    ///Add all command to vector with all function-command to form trie in another class
-    functions.push_back(&CLA::help);
-    functions.push_back(&CLA::quit);
-    functions.push_back(&CLA::logOn);
-    functions.push_back(&CLA::Exit);
-    functions.push_back(&CLA::save);
-    functions.push_back(&CLA::load);
-    functions.push_back(&CLA::logFile);
-    functions.push_back(&CLA::list);
-    functions.push_back(&CLA::logOff);
-    functions.push_back(&CLA::logAppend);
-    functions.push_back(&CLA::logNew);
-    functions.push_back(&CLA::logClearHistory);
 
-}
-
-void CLA::greeting()
+ void CLA::greeting()
 {
 
     cout<<
@@ -38,17 +19,16 @@ void CLA::help()
         "Commands:\n"
         "help - show instruction\n"//////////
         "quit - exit without save\n"//////////
-        "exit - exit with save\n"
-        "save - save command history\n"
-        "load - open file with history\n"
-        "logfile - show file name\n"
-        "logfile(\"new pass\") - show file name and change it\n"
-        "list - show your history\n"
-        "log on - start record history\n"////////////
-        "log off - stop record history\n"///////////
-        "log append - record your history to the back\n"/////////
-        "log new - clear and start record new history\n"/////////
-        "log clear history - clear your history\n";///////////
+        "exit - exit with save\n"///////////
+        "save - save command history\n"/////////
+        "load - open file with history\n"/////////////
+        "logfile - show file name\n"/////////////
+        "list - show your history\n"////////////
+        "logOn - start record history\n"////////////
+        "logOff - stop record history\n"///////////
+        "logAppend - record your history to the back\n"/////////
+        "logNew - clear and start record new history\n"/////////
+        "logClearHistory - clear your history\n";///////////
 }
 
 void CLA::quit()
@@ -58,24 +38,57 @@ void CLA::quit()
 
 void CLA::logOn()
 {
-    history.setOnOf(1);
+    setOnOf(1);
+    PushBack(TimeToString()+" > log on");
 }
 
 void CLA::logOff()
 {
-    history.setOnOf(0);
+   PushBack(TimeToString()+" > log off");
+   setOnOf(0);
 }
 
 void CLA::logAppend()
 {
-    history.setClear(0);
+    PushBack(TimeToString()+" > log append");
+    setClear(0);
 }
 
 void CLA::logNew()
 {
-    history.setClear(1);
+    setClear(1);
+    PushBack(TimeToString()+" > log new");
+}
+void CLA::save()
+{
+    PushBack(TimeToString()+" > save");
+    Save();
 }
 
+void CLA::Exit()
+{
+    Save();
+    exit(0);
+}
+
+void CLA::load()
+{
+    WinExec(R"(C:\Users\Sophia\Desktop\CLL\history.txt)", SW_SHOWNORMAL);
+}
+
+void CLA::logFile()
+{
+    cout<<"C:\\Users\\Sophia\\Desktop\\CLL\\history.txt";
+}
+
+void CLA::list()
+{
+    WinExec(R"(C:\Users\Sophia\Desktop\CLL\history.txt)", SW_SHOWNORMAL);
+}
+void CLA::logClearHistory()
+{
+    Clear();
+}
 
 string CLA::TimeToString()
 {
@@ -90,5 +103,4 @@ string CLA::TimeToString()
     result << (time.tm_sec  < 10? "0": "") << time.tm_sec;
     return result.str();
 }
-
 
