@@ -1,5 +1,5 @@
 # Spectrum library :rocket:
-## Spectrum - N-N-N-...-N-array, eleem
+#### Spectrum - N-N-N-...-N-array, that contains element on the random generated coordinates and this element depends on coordinates duplication (1 = 1 dublication, 2 = 2 dublication, .......).
 ## Basic plan:
 You can choose only one of this commands:
 *    "consol" - show function with consol
